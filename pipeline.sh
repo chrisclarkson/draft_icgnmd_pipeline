@@ -6,12 +6,12 @@ source config.sh
 if [ "$ALIGNER" = "bwa" ]; then
     echo "Running BWA-MEM alignment"
     bwa mem -t $THREADS $REF $R1 $R2 | samtools sort -@ $THREADS -o ${SAMPLE}.bam
-gatk MarkDuplicates \
-   -I ${SAMPLE}.bam \
-   -O ${SAMPLE}.dedup.bam \
-   -M ${SAMPLE}.metrics.txt
+    gatk MarkDuplicates \
+    -I ${SAMPLE}.bam \
+    -O ${SAMPLE}.dedup.bam \
+    -M ${SAMPLE}.metrics.txt
 
-samtools index ${SAMPLE}.dedup.bam
+    samtools index ${SAMPLE}.dedup.bam
 elif [ "$ALIGNER" = "minimap2" ]; then
     echo "Running minimap2 alignment"
     minimap2 -ax sr -t $THREADS $REF $R1 $R2 | samtools sort -@ $THREADS -o ${SAMPLE}.bam
