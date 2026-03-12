@@ -27,7 +27,7 @@ elif [ "$ALIGNER" = "minimap2" ]; then
 fi
 
 samtools index ${SAMPLE}.bam
-
+REF="/path/to/refererenc.fa"
 if [ "$CALLER" = "gatk" ]; then
     echo "Running GATK HaplotypeCaller"
 
