@@ -22,24 +22,23 @@ To be done...
 
 
 ## Annotate VCF
+```
 vep \
   --input_file cohort.vcf.gz \
   --output_file cohort.annotated.vcf.gz \
   --vcf \
   --compress_output bgzip \
-  --fork 16 \
   --offline \
   --cache \
   --assembly GRCh38 \
   --dir_cache ~/.vep \
-  --fasta Homo_sapiens.GRCh38.dna.primary_assembly.fa \
-  --everything \
+  --fasta reference.fa \
   \
   --plugin CADD,annotations/CADD_GRCh38.tsv.gz \
-  --plugin REVEL,annotations/revel_grch38.tsv.gz \
   --plugin SpliceAI,snv=annotations/spliceai_scores.masked.snv.hg38.vcf.gz \
   \
   --custom annotations/clinvar.vcf.gz,ClinVar,vcf,exact,0,CLNSIG,CLNDN \
   --custom annotations/gnomad.genomes.v3.1.sites.vcf.gz,gnomADg,vcf,exact,0,AF,AF_popmax \
   \
   --fields "Uploaded_variation,Location,Allele,Gene,Feature,Consequence,Protein_position,Amino_acids,CADD_PHRED,REVEL,SpliceAI_pred_DS_AG,SpliceAI_pred_DS_AL"
+  ```
