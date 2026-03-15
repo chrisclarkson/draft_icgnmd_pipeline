@@ -16,29 +16,28 @@ cat unfinished_jobs.txt # check log files of any jobs that didn't finish
 
 ## Nextflow optionality
 nextflow run main.nf --aligner minimap2 --caller deepvariant
-
-## Concatenate GVCF outputs
-To be done...
-
+![plot](./flowchart_deep.png)
+![plot](./flowchart_gatk.png)
 
 ## Annotate VCF
 ```
 vep \
-  --input_file cohort.vcf.gz \
-  --output_file cohort.annotated.vcf.gz \
-  --vcf \
-  --compress_output bgzip \
-  --offline \
-  --cache \
-  --assembly GRCh38 \
-  --dir_cache ~/.vep \
-  --fasta reference.fa \
-  \
-  --plugin CADD,annotations/CADD_GRCh38.tsv.gz \
-  --plugin SpliceAI,snv=annotations/spliceai_scores.masked.snv.hg38.vcf.gz \
-  \
-  --custom annotations/clinvar.vcf.gz,ClinVar,vcf,exact,0,CLNSIG,CLNDN \
-  --custom annotations/gnomad.genomes.v3.1.sites.vcf.gz,gnomADg,vcf,exact,0,AF,AF_popmax \
-  \
-  --fields "Uploaded_variation,Location,Allele,Gene,Feature,Consequence,Protein_position,Amino_acids,CADD_PHRED,REVEL,SpliceAI_pred_DS_AG,SpliceAI_pred_DS_AL"
+    --input_file cohort.vcf.gz \
+    --output_file cohort.annotated.vcf.gz \
+    --vcf \
+    --compress_output bgzip \
+    --offline \
+    --cache \
+    --assembly GRCh38 \
+    --dir_cache ~/.vep \
+    --fasta reference.fa \
+    --plugin CADD,annotations/CADD_GRCh38.tsv.gz \
+    --plugin AlphaMissense,annotations/AlphaMissense_GRCh38.tsv.gz,cols=all
+    --plugin SpliceAI,snv=annotations/spliceai_scores.masked.snv.hg38.vcf.gz \
+    --custom annotations/clinvar.vcf.gz,ClinVar,vcf,exact,0,CLNSIG,CLNDN \
+    --custom annotations/gnomad.genomes.v3.1.sites.vcf.gz,gnomADg,vcf,exact,0,AF,AF_popmax \
+    --fields "Uploaded_variation,Location,Allele,Gene,Feature,Consequence,Protein_position,Amino_acids,CADD-raw,am_pathogenicity,am_class,SpliceAI_pred_DS_AG,SpliceAI_pred_DS_AL"
   ```
+
+
+
