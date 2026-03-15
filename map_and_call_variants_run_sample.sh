@@ -21,6 +21,17 @@ if [ "$ALIGNER" = "bwa" ]; then
         -O ${SAMPLE}.dedup.bam \
         -M ${SAMPLE}.metrics.txt
     samtools index ${SAMPLE}.dedup.bam
+    gatk BaseRecalibrator \
+        -R reference.fa \
+        -I ${SAMPLE}.dedup.bam \
+        --known-sites dbsnp.vcf.gz #must be predownloaded \
+        --known-sites mills_indels.vcf.gz #must be predownloaded \
+        -O sample.recal.table
+    gatk ApplyBQSR \
+        -R reference.fa \
+        -I ${SAMPLE}.dedup.bam \
+        --bqsr-recal-file sample.recal.table \
+        -O ${SAMPLE}.recalibrated.bam
 elif [ "$ALIGNER" = "minimap2" ]; then
     echo "Running minimap2 alignment"
     minimap2 -ax sr -t $THREADS $REF $R1 $R2 | samtools sort -@ $THREADS -o ${SAMPLE}.bam
@@ -33,9 +44,17 @@ if [ "$CALLER" = "gatk" ]; then
 
     gatk HaplotypeCaller \
         -R $REF \
-        -I ${SAMPLE}.dedup.bam \
+        -I ${SAMPLE}.recalibrated.bam \
         -O ${SAMPLE}.g.vcf.gz \
         -ERC GVCF
+   gatk CombineGVCFs \
+        -R reference.fa \
+        -V *.g.vcf.gz \
+        -O cohort.g.vcf.gz
+    gatk GenotypeGVCFs \
+        -R reference.fa \
+        -V cohort.g.vcf.gz \
+        -O cohort.vcf.gz
 
 elif [ "$CALLER" = "deepvariant" ]; then
     echo "Running DeepVariant"

@@ -1,0 +1,13 @@
+2026-03-14 16:13:05	2.8s	golden_edison	OK	d06aeb65e64c75076a72604796b8f530	cda5b7e1-5057-40a6-b17d-eff1bd5bab14	nextflow run main.nf -with-dag flowchart.png
+2026-03-14 16:13:59	1.4s	cranky_wiles	OK	d06aeb65e64c75076a72604796b8f530	487b4584-26a7-4d58-8f87-76cf2377f038	nextflow run main.nf -with-dag flowchart.png
+2026-03-14 16:15:10	2.1s	clever_cantor	OK	d169fa5df52df425b7502f6a0fc2034c	a017a918-24f0-4300-a172-4a7b86eed61a	nextflow run main.nf -with-dag flowchart.png
+2026-03-14 16:16:23	2.3s	crazy_mccarthy	OK	d169fa5df52df425b7502f6a0fc2034c	2fb03f7d-0503-43b3-ae4c-c2f70741e3da	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-14 17:17:36	-	cheesy_austin	-	07692b6ec761df3907b2500d49ae653f	71468ddc-1b5e-4a33-aa9e-af89faf1f9c1	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-14 17:18:47	-	crazy_pesquet	-	a4f2cb43ed5778db861a951737ec2c13	99112e23-481c-4137-8304-e277603a3d74	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-14 17:24:34	2.3s	disturbed_wozniak	OK	b1ba344ed5bf75d43d695b3e00a651bf	49ee6d4b-206a-4c52-8ef2-5ee376ff4bc5	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-14 17:31:59	-	marvelous_venter	-	2c087db957886e6268f65f12d7eb6dd3	c96bc6fc-d331-4c00-986f-45653e6ca3d1	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-14 17:32:57	-	irreverent_stonebraker	-	d974ec0e6e44dacb0010ec8c953737e1	b8c76e5e-0182-40fc-a9fa-517a44ca36e1	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-14 17:33:35	1.9s	lonely_poitras	OK	def7468ad7c053bc7b20adfbc2e35abe	abfc03c5-8f8e-471d-b044-47daead8f37a	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-15 12:42:43	3.7s	distraught_wiles	OK	741f102bdcc6ef5bc53ae25dd41610f4	d19de0a0-1212-4e50-b60a-ace2be8e03b9	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-15 12:44:34	3.4s	hungry_keller	OK	a204a157938830e89b50b1578b1236ef	e6523327-e26b-49af-8deb-adaa4ed9c452	nextflow run main.nf -with-dag flowchart_deep.png
+2026-03-15 12:45:34	3s	modest_franklin	OK	a204a157938830e89b50b1578b1236ef	2c063496-aad9-4758-96fb-1129bea65d9d	nextflow run main.nf -with-dag flowchart_gatk.png
