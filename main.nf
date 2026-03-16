@@ -32,7 +32,7 @@ process ALIGN_BWA {
 
     script:
         """
-        bwa mem -t 16 ${params.ref} ${reads[0]} ${reads[1]} \
+        bwa mem -K 1000000000 -Y -t 16 ${params.ref} ${reads[0]} ${reads[1]} \
         | samtools sort -o ${sample}.bam
         samtools index ${sample}.bam
         """

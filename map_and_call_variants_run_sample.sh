@@ -15,7 +15,7 @@ echo "Running sample: $SAMPLE"
 
 if [ "$ALIGNER" = "bwa" ]; then
     echo "Running BWA-MEM alignment"
-    bwa mem -t $THREADS $REF $R1 $R2 | samtools sort -@ $THREADS -o ${SAMPLE}.bam
+    bwa mem -Y -t $THREADS $REF $R1 $R2 | samtools sort -@ $THREADS -o ${SAMPLE}.bam
     gatk MarkDuplicates \
         -I ${SAMPLE}.bam \
         -O ${SAMPLE}.dedup.bam \
