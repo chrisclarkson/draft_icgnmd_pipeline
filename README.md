@@ -61,7 +61,7 @@ While flawed due to the limitations of srWGS- ExpansionHunter denovo can be a po
 
 Furthermore repeat crawler (https://github.com/chrisclarkson/gel/blob/main/RC_latest.py) can help to assign structure to alleles for subsequent instability analysis.
 
-![plot](./shank2_structure.png)
+![plot](./shank2_str_structure.png)
 For methods/details of structure imputation of expanded repeats- see bottom of https://github.com/chrisclarkson/gel/blob/main/README.md
 
 
