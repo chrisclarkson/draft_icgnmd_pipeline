@@ -54,8 +54,9 @@ The API is queryable: https://deepmind.google.com/science/alphagenome/api
 # Complex variation structural variation and repeat expansions
 ## Structural variation
 Minimap2 + Manta seems to outperform all other SV calling methods:
+```
 ./SV_caller.sh sample1 sample1_R1.fastq.gz sample1_R2.fastq.gz
-
+```
 ## Denovo repeat expansion discovery
 While flawed due to the limitations of srWGS- ExpansionHunter denovo can be a powerfull tool to identify deviations in STR motif constitution from reference genome. (Exemplary code only on GEL platform right now. Can be shown if asked.)
 
