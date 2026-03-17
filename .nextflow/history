@@ -11,3 +11,10 @@
 2026-03-15 12:42:43	3.7s	distraught_wiles	OK	741f102bdcc6ef5bc53ae25dd41610f4	d19de0a0-1212-4e50-b60a-ace2be8e03b9	nextflow run main.nf -with-dag flowchart_deep.png
 2026-03-15 12:44:34	3.4s	hungry_keller	OK	a204a157938830e89b50b1578b1236ef	e6523327-e26b-49af-8deb-adaa4ed9c452	nextflow run main.nf -with-dag flowchart_deep.png
 2026-03-15 12:45:34	3s	modest_franklin	OK	a204a157938830e89b50b1578b1236ef	2c063496-aad9-4758-96fb-1129bea65d9d	nextflow run main.nf -with-dag flowchart_gatk.png
+2026-03-16 13:32:42	2.3s	focused_coulomb	OK	65ba635790a9d015745e39dc7b8fdbc4	743f6c19-4255-48c0-a7e3-6cc4de9ba1df	nextflow run long_read.nf -with-dag long_read.png
+2026-03-16 15:03:19	-	confident_swirles	-	b4bfad3c8d3f5a94e4e9f47b16af18b8	dff691c5-2c2e-4804-ad8f-82f290a53fbd	nextflow run long_read.nf -with-dag long_read.png
+2026-03-16 15:10:08	-	angry_ochoa	-	39f16dc141342d7ef298ba92f81fdc2f	ba8f527d-7745-47f5-bea9-5b5a22ccc69e	nextflow run long_read.nf -with-dag long_read.png
+2026-03-16 15:10:33	-	compassionate_volta	-	9c6b79631a79dd95f029f00c505d9ff1	689112e5-ec96-40d7-9f5e-c22d6d291d84	nextflow run long_read.nf -with-dag long_read.png
+2026-03-16 15:10:53	-	silly_becquerel	-	3462fe2627bb0bdb687f1fc6c3280385	e440ff8a-97f2-4811-bb98-689d96d2f8b7	nextflow run long_read.nf -with-dag long_read.png
+2026-03-16 15:13:43	1.9s	suspicious_mendel	OK	e557072d92a68cc0ce447c0f687fb058	3dbb101d-8055-4e6c-acc7-0f35df98602f	nextflow run long_read.nf -with-dag long_read.png
+2026-03-16 23:51:47	2.6s	irreverent_chandrasekhar	OK	1785943338dd8ca131a6206a0131ceaf	d79798bb-4171-49b3-97c3-58d8669d1a31	nextflow run long_read.nf -with-dag long_read.png

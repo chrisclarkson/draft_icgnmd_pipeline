@@ -81,6 +81,14 @@ nextflow run long_read.nf -with-dag long_read.png
 ```
 ![plot](./long_read.png)
 Furthermore, simply studying segregation of SVs and repeat expansions across family trios could also highlight significant variation.
+Storage solutions of these data will be vital- at a first glance it might be necessary to only keep reference genome, pipelines to generate results and the results files to enable rerunning revised strategy is needed- also see: 
+  - https://www.biostars.org/p/384118/
+  - https://aws.amazon.com/blogs/industries/store-omics-data-cost-effectively-at-any-scale-with-aws-healthomics/
 ## RNA Seq
+Very informative pipeline for handling expression values and outliers:
+https://github.com/lfresard/blood_rnaseq_rare_disease_paper/blob/master/pipeline.md
 
-
+### More generic DROP pipeline:
+#### Initially map RNA seq reads
+./DROP.sh sample1 sample_rna1.fastq.gz sample_rna2.fastq.gz reference.fa gencode.gtf
+drop run drop_config.yaml

@@ -1,0 +1,22 @@
+root: "./rna_results"
+
+genomeAssembly: "hg38"
+
+annotation:
+  gtfFile: "gencode.gtf"
+
+analysis:
+  outrider: yes
+  fraser: yes
+  ase: yes
+
+tools:
+  samtools: "samtools"
+
+counts:
+  geneCounts:
+    stranded: no
+
+ase:
+  vcfs:
+    - "variants/sample1.vcf.gz"

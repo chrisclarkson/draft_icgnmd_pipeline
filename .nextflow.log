@@ -1,0 +1,103 @@
+Mar-16 23:51:46.284 [main] DEBUG nextflow.cli.Launcher - $> nextflow run long_read.nf -with-dag long_read.png
+Mar-16 23:51:46.471 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Mar-16 23:51:46.540 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/Deirdreclarkson/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Mar-16 23:51:46.581 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-16 23:51:46.582 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-16 23:51:46.585 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Mar-16 23:51:46.610 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-16 23:51:46.661 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/nextflow.config
+Mar-16 23:51:46.664 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/nextflow.config
+Mar-16 23:51:46.740 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/Deirdreclarkson/.nextflow/secrets/store.json
+Mar-16 23:51:46.746 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7b208b45] - activable => nextflow.secret.LocalSecretsProvider@7b208b45
+Mar-16 23:51:46.761 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Mar-16 23:51:47.784 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Mar-16 23:51:47.805 [main] DEBUG nextflow.cli.CmdRun - Launching `long_read.nf` [irreverent_chandrasekhar] DSL2 - revision: 1785943338
+Mar-16 23:51:47.808 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-16 23:51:47.808 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-16 23:51:47.883 [main] DEBUG nextflow.Session - Session UUID: d79798bb-4171-49b3-97c3-58d8669d1a31
+Mar-16 23:51:47.884 [main] DEBUG nextflow.Session - Run name: irreverent_chandrasekhar
+Mar-16 23:51:47.884 [main] DEBUG nextflow.Session - Executor pool size: 10
+Mar-16 23:51:47.896 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-16 23:51:47.904 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Mar-16 23:51:47.948 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (12:27 IST)
+  System: Mac OS X 15.7.4
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.6+9-b895.97
+  Encoding: UTF-8 (UTF-8)
+  Process: 26128@Deirdres-MacBook-Air.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (29.4 MB) - Swap: 12 GB (1.3 GB)
+Mar-16 23:51:47.985 [main] DEBUG nextflow.Session - Work-dir: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/work [Mac OS X]
+Mar-16 23:51:47.986 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/bin
+Mar-16 23:51:48.002 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-16 23:51:48.015 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-16 23:51:48.052 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Mar-16 23:51:48.110 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-16 23:51:48.124 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Mar-16 23:51:48.183 [main] DEBUG nextflow.Session - Session start
+Mar-16 23:51:48.205 [main] DEBUG nextflow.Session - DAG file already exists: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/long_read.png -- enable `dag.overwrite` in your config file to overwrite existing DAG files
+nextflow.exception.AbortOperationException: DAG file already exists: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/long_read.png -- enable `dag.overwrite` in your config file to overwrite existing DAG files
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.trace.GraphObserver.onFlowCreate(GraphObserver.groovy:77)
+	at nextflow.Session$_notifyFlowCreate_lambda40.doCall(Session.groovy:1093)
+	at nextflow.Session.notifyEvent(Session.groovy:1138)
+	at nextflow.Session.notifyFlowCreate(Session.groovy:1093)
+	at nextflow.Session.start(Session.groovy:585)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:133)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+Mar-16 23:51:48.900 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-16 23:51:49.083 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.084 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.093 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-16 23:51:49.102 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Mar-16 23:51:49.106 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-16 23:51:49.126 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ALIGN': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.195 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.195 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.196 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'DEEPVARIANT': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.200 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.200 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.201 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'CLAIR3': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.208 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.209 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.209 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MERGE_SNV': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.216 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.216 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.217 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SNIFFLES': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.222 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.222 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.222 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SVIM': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.228 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.228 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.230 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'STRAGLR': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.235 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.235 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.235 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PHASE': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.238 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-16 23:51:49.238 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-16 23:51:49.239 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MERGE_SV': maxForks=0; fair=false; array=0
+Mar-16 23:51:49.244 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CLAIR3, SVIM, ALIGN, MERGE_SNV, PHASE, STRAGLR, MERGE_SV, SNIFFLES, HIFIASM, DEEPVARIANT
+Mar-16 23:51:49.252 [main] DEBUG nextflow.Session - Igniting dataflow network (10)
+Mar-16 23:51:49.263 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGN
+Mar-16 23:51:49.263 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ./; pattern: *.fastq.gz; options: [:]
+Mar-16 23:51:49.267 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DEEPVARIANT
+Mar-16 23:51:49.268 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CLAIR3
+Mar-16 23:51:49.273 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MERGE_SNV
+Mar-16 23:51:49.274 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SNIFFLES
+Mar-16 23:51:49.274 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SVIM
+Mar-16 23:51:49.275 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STRAGLR
+Mar-16 23:51:49.275 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PHASE
+Mar-16 23:51:49.275 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MERGE_SV
+Mar-16 23:51:49.276 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_277acd4fdde29158: /Users/Deirdreclarkson/Downloads/draft_icgnmd_pipeline/long_read.nf
+Mar-16 23:51:49.276 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-16 23:51:49.276 [main] DEBUG nextflow.Session - Session await
+Mar-16 23:51:49.315 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-16 23:51:49.320 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Mar-16 23:51:49.320 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-16 23:51:49.327 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-16 23:51:49.593 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-16 23:51:49.634 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Mar-16 23:51:49.635 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
