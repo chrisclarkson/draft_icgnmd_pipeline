@@ -9,7 +9,6 @@ SAMPLE=$1
 R1=$2
 R2=$3
 REF=$4
-GTF=$5
 
 THREADS=16
 

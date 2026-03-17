@@ -93,6 +93,5 @@ https://github.com/lfresard/blood_rnaseq_rare_disease_paper/blob/master/pipeline
 ### More generic DROP pipeline:
 #### Initially map RNA seq reads
 ```
-./DROP.sh sample1 sample_rna1.fastq.gz sample_rna2.fastq.gz reference.fa gencode.gtf
-drop run drop_config.yaml
+./DROP.sh sample1 sample_rna1.fastq.gz sample_rna2.fastq.gz reference.fa
 ```
