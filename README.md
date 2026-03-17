@@ -1,3 +1,5 @@
+# Question 1:
+
 # Run mapping and variant calling using using either GATK or Deepvariant
 ## run using bwa and gatk
 ```
@@ -15,9 +17,13 @@ cat unfinished_jobs.txt # check log files of any jobs that didn't finish
 ```
 
 ## Nextflow optionality
+```
+nextflow run main.nf --aligner bwa --caller gatk
 nextflow run main.nf --aligner minimap2 --caller deepvariant
-![plot](./flowchart_deep.png)
+```
 ![plot](./flowchart_gatk.png)
+![plot](./flowchart_deep.png)
+
 
 ## Annotate VCF
 ```
@@ -40,13 +46,14 @@ vep \
   ```
 
 ## Variant interpretation
+### ACMG classifiction
+Many ACMG classifiction APIs seem to exist (e.g. Alphamissense) to perform an intitial assignment of `Pathogenic`,`Very likely pathogenic`,`...`,`VUS` to variants and possibly prioritise cases.
 
-
-### Potentially could try RAMEDIES
+### Potentially could try RAMEDIES to cluster patients by HPO terms
 from: https://www.nature.com/articles/s41467-025-61712-2
 See below exemplary script for computing semantic difference between HPO lists of 2 patients:
 https://bitbucket.org/bejerano/phrank/src/master/demo/demo_phrank.py
-Subsequently- could use what ever means to assign genes to each patient (e.g. AF<0.001 or CADD>10) and then perform per-cluster enrichment analysis
+Subsequently- could use what ever means to assign genes to each patient (e.g. AF<0.001 or CADD>10) and then perform per-cluster enrichment analysis to nominate variants.
 
 ### Alpha genome could help contextualise variant effect at unprecedented level:
 The API is queryable: https://deepmind.google.com/science/alphagenome/api
@@ -65,6 +72,15 @@ Furthermore repeat crawler (https://github.com/chrisclarkson/gel/blob/main/RC_la
 ![plot](./shank2_str_structure.png)
 For methods/details of structure imputation of expanded repeats- see bottom of https://github.com/chrisclarkson/gel/blob/main/README.md
 
+# Question 2:
 
+## Long read
+Makes it possible to phase distal variants but also ascertain much more complex variation:
+```
+nextflow run long_read.nf -with-dag long_read.png
+```
+![plot](./long_read.png)
+Furthermore, simply studying segregation of SVs and repeat expansions across family trios could also highlight significant variation.
+## RNA Seq
 
 
