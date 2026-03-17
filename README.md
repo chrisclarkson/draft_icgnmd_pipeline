@@ -81,6 +81,8 @@ nextflow run long_read.nf -with-dag long_read.png
 ```
 ![plot](./long_read.png)
 Furthermore, simply studying segregation of SVs and repeat expansions across family trios could also highlight significant variation.
+
+## Storing LR data
 Storage solutions of these data will be vital- at a first glance it might be necessary to only keep reference genome, pipelines to generate results and the results files to enable rerunning revised strategy is needed- also see: 
   - https://www.biostars.org/p/384118/
   - https://aws.amazon.com/blogs/industries/store-omics-data-cost-effectively-at-any-scale-with-aws-healthomics/
